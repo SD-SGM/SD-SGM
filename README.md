@@ -2,93 +2,31 @@
 
 # Reliable LiDAR Loop Detection through Structural Descriptors and Semantic Graph Matching
 
-[![](https://img.shields.io/badge/Page-SGLC-d6ccc2?style=flat-square&labelColor=495057&logoColor=white)](https://neng-wang.github.io/SGLC/) [![](https://img.shields.io/badge/Video-oneDrive-00b4d8?style=flat-square&labelColor=495057&logoColor=white)](https://1drv.ms/f/c/262fa73419fbaa92/Es1dRoIbvBdMpaR3yKjnVpUB-BMc9TOvGyGpW6Rj0ri3sw?e=ZnAl9F) [![](https://img.shields.io/badge/Paper-IEEE-023e8a?style=flat-square&labelColor=495057&logoColor=white)](https://ieeexplore.ieee.org/document/10750042) [![](https://img.shields.io/badge/Paper-arXiv-d62828?style=flat-square&labelColor=495057&logoColor=white)](https://arxiv.org/abs/2407.08106)
+ [![](https://img.shields.io/badge/Video-oneDrive-00b4d8?style=flat-square&labelColor=495057&logoColor=white)](https://1drv.ms/f/c/262fa73419fbaa92/Es1dRoIbvBdMpaR3yKjnVpUB-BMc9TOvGyGpW6Rj0ri3sw?e=ZnAl9F) 
 
 </div>
 
-This repo contains the implementation of our paper 
+# 1. Prerequisites
 
-> **SGLC: Semantic Graph-Guided Coarse-Fine-Refine Full Loop Closing for LiDAR SLAM**
->
-> [Neng Wang](https://github.com/neng-wang), [Xieyuanli Chen](https://github.com/Chen-Xieyuanli),  [Chenghao Shi](https://github.com/chenghao-shi), Zhiqiang Zheng, Hongshan Yu, Huimin Lu
-
-*SGLC is a semantic graph guided full loop closing framework with robust  loop closure detection and 6-DoF poes estimation.*
-
-If you use our work, please cite the paper:
-```bib
-@ARTICLE{wang2024ral,
-  author={Wang, Neng and Chen, Xieyuanli and Shi, Chenghao and Zheng, Zhiqiang and Yu, Hongshan and Lu, Huimin},
-  journal={IEEE Robotics and Automation Letters}, 
-  title={SGLC: Semantic Graph-Guided Coarse-Fine-Refine Full Loop Closing for LiDAR SLAM}, 
-  year={2024},
-  volume={9},
-  number={12},
-  pages={11545-11552},
-  doi={10.1109/LRA.2024.3495455}}
-```
-
-## News:
-
-- [2024-11] We release the code of SGLC, which we hope will be of assistance to your research. 
-
-- [2024-10] SGLC is accepted to RAL. :clap:
-
-- [2024-07] Paper is available in arXiv website.
-
-  
-
-# 1. Introduction
-
-### 1.1 Framework
-
-<div align="center">
-    <div align="center">
-        <img src="./pic/framework.png" width = 100% >
-    </div>
-    <font color=#a0a0a0 size=2>It first builds a semantic graph for foreground instances and then generates LiDAR scan descriptor considering both the topological properties of the semantic graph and the appearance characteristics of the background. The LiDAR scan descriptor is utilized to retrieve loop candidate scans from the database. Following this,  geometric verification is performed on each loop candidate to filter out false loop closure, with the key step utilizing the instance node descriptors for robust sparse node matching. Finally, a coarse-fine-refine registration scheme is employed to estimate the precise 6-DoF pose.</font>
-</div>
-
-### 1.2 A related video
-
-You can check it online on this  [link](https://1drv.ms/f/c/262fa73419fbaa92/Es1dRoIbvBdMpaR3yKjnVpUB-BMc9TOvGyGpW6Rj0ri3sw?e=ZnAl9F).
-
-<div align="center">
-    <a href="https://1drv.ms/f/c/262fa73419fbaa92/Es1dRoIbvBdMpaR3yKjnVpUB-BMc9TOvGyGpW6Rj0ri3sw?e=ZnAl9F" target="_blank"><img src="./pic/video_cover.png" width=75% /></a>
-</div>
-
-# 2. Prerequisites
-
-We tested our code on **ubuntu 20.04** and **ubuntu 18.04**. 
+We tested our code on **ubuntu 20.04** and **ubuntu 22.04**. 
 
 - **[Eigen](https://gitlab.com/libeigen/eigen/-/releases) (3.3.7)**
-- **[PCL](https://github.com/PointCloudLibrary/pcl/releases) (1.10)**
+- **[PCL](https://github.com/PointCloudLibrary/pcl/releases) (1.12)**
 - **[Ceres-solver](https://github.com/ceres-solver/ceres-solver/tags) (2.1.0)**
 
 You need to install these libraries from official guidance.'
 
-# 3. Data
+# 2. Data
 
-### 1. KITTI
+## KITTI
 
 You can download the point cloud dataset from the KITTI official [website](https://www.cvlibs.net/datasets/kitti/), as well as the labels from the semanticKITTI [website](http://semantic-kitti.org/). In our experiments, we use the labels from the SegNet4D. For the convenience, you can download from [here](https://1drv.ms/f/c/5f06ab4eccad8a4e/ErYFBreLgOZHqeWc2-WasIAB6sdME03IipgqzkYuRsTDZg?e=sL1yBr).
 
 Loop pairs: we use the distance-based criteria from the [SSC](https://github.com/lilin-hitcrt/SSC) and overlap-based criteria from [OverlapTransformer](https://github-com-s.libyc.nudt.edu.cn/haomo-ai/OverlapTransformer). You also can download from our [link](https://1drv.ms/f/c/5f06ab4eccad8a4e/ErYFBreLgOZHqeWc2-WasIAB6sdME03IipgqzkYuRsTDZg?e=sL1yBr).
 
-### 2. KITTI360
+## 3. Usage
 
-Download the LiDAR scans from the official [website](https://www.cvlibs.net/datasets/kitti-360/). We provide the labels from SegNet4D.
-
-### 3. Ford campus
-
-You can follow the [OverlapTransformer](https://github-com-s.libyc.nudt.edu.cn/haomo-ai/OverlapTransformer) to download the dataset. We provide the labels on the [link](https://1drv.ms/f/c/5f06ab4eccad8a4e/ErYFBreLgOZHqeWc2-WasIAB6sdME03IipgqzkYuRsTDZg?e=sL1yBr).
-
-### 4. Apollo
-
-We use the Apollo Columbia Park MapData proposed by [AutoMOS](). You can download it from the [MapMOS](https://github.com/PRBonn/MapMOS?tab=readme-ov-file) repository. The semantic labels can be found in the [link](https://1drv.ms/f/c/5f06ab4eccad8a4e/ErYFBreLgOZHqeWc2-WasIAB6sdME03IipgqzkYuRsTDZg?e=sL1yBr).
-
-## 4. Usage
-
-### 4.1 Install
+### 3.1 Install
 
 ```bash
 git clone git@github.com:nubot-nudt/SGLC.git
