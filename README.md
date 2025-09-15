@@ -20,9 +20,9 @@ You need to install these libraries from official guidance.'
 
 ## KITTI
 
-You can download the point cloud dataset from the KITTI official [website](https://www.cvlibs.net/datasets/kitti/), as well as the labels from the semanticKITTI [website](http://semantic-kitti.org/). In our experiments, we use the labels from the SegNet4D. For the convenience, you can download from [here](https://1drv.ms/f/c/5f06ab4eccad8a4e/ErYFBreLgOZHqeWc2-WasIAB6sdME03IipgqzkYuRsTDZg?e=sL1yBr).
+You can download the point cloud dataset from the KITTI official [website](https://www.cvlibs.net/datasets/kitti/). In our experiments, we use the labels from the SegNet4D. For the convenience, you can download from [here](https://onedrive.live.com/?id=%2Fpersonal%2F807229e8eebd9eb1%2FDocuments%2FSD%2DSGM&view=0).
 
-Loop pairs: we use the distance-based criteria from the [SSC](https://github.com/lilin-hitcrt/SSC) and overlap-based criteria from [OverlapTransformer](https://github-com-s.libyc.nudt.edu.cn/haomo-ai/OverlapTransformer). You also can download from our [link](https://1drv.ms/f/c/5f06ab4eccad8a4e/ErYFBreLgOZHqeWc2-WasIAB6sdME03IipgqzkYuRsTDZg?e=sL1yBr).
+Loop pairs: we use the distance-based criteria from the [SSC](https://github.com/lilin-hitcrt/SSC) and overlap-based criteria from [OverlapTransformer](https://github-com-s.libyc.nudt.edu.cn/haomo-ai/OverlapTransformer). You also can download from our [link](https://onedrive.live.com/?id=%2Fpersonal%2F807229e8eebd9eb1%2FDocuments%2FSD%2DSGM&view=0).
 
 ## 3. Usage
 
