@@ -1,6 +1,6 @@
 <div align="center">
 
-# SGLC: Semantic Graph-Guided Coarse-Fine-Refine Full Loop Closing for LiDAR SLAM
+# Reliable LiDAR Loop Detection through Structural Descriptors and Semantic Graph Matching
 
 [![](https://img.shields.io/badge/Page-SGLC-d6ccc2?style=flat-square&labelColor=495057&logoColor=white)](https://neng-wang.github.io/SGLC/) [![](https://img.shields.io/badge/Video-oneDrive-00b4d8?style=flat-square&labelColor=495057&logoColor=white)](https://1drv.ms/f/c/262fa73419fbaa92/Es1dRoIbvBdMpaR3yKjnVpUB-BMc9TOvGyGpW6Rj0ri3sw?e=ZnAl9F) [![](https://img.shields.io/badge/Paper-IEEE-023e8a?style=flat-square&labelColor=495057&logoColor=white)](https://ieeexplore.ieee.org/document/10750042) [![](https://img.shields.io/badge/Paper-arXiv-d62828?style=flat-square&labelColor=495057&logoColor=white)](https://arxiv.org/abs/2407.08106)
 
