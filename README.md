@@ -2,8 +2,6 @@
 
 # Reliable LiDAR Loop Detection through Structural Descriptors and Semantic Graph Matching
 
- [![](https://img.shields.io/badge/Video-oneDrive-00b4d8?style=flat-square&labelColor=495057&logoColor=white)](https://1drv.ms/f/c/262fa73419fbaa92/Es1dRoIbvBdMpaR3yKjnVpUB-BMc9TOvGyGpW6Rj0ri3sw?e=ZnAl9F) 
-
 </div>
 
 # 1. Prerequisites
@@ -36,7 +34,7 @@ cmake ..
 make -j8
 ```
 
-### 4.2 Loop Closure Detection
+### 3.2 Loop Closure Detection
 
 - **KITTI dataset (distance-based)** 
 
