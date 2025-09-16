@@ -42,10 +42,10 @@ Modify `config/config_kitti_graph.yaml`
 
 ```yaml
 eval_seq:
-  cloud_path: "xx/kitti/sequences/08/velodyne/" # your LiDAR scans
-  label_path: "xx/SegNet4D_predicitions/kitti/sequences/08/predictions/" # semantic predictions from our link
-  pairs_file: "../loop_data/pairs/pairs_kitti/neg_100/08.txt" # loop pairs
-  out_file: "../out/kitti/08.txt"  # output file for evaluating
+  cloud_path: "xx/kitti/sequences/02/velodyne/" # your LiDAR scans
+  label_path: "xx/SegNet4D_predicitions/kitti/sequences/02/predictions/" # semantic predictions from our link
+  pairs_file: "../loop_data/pairs/pairs_kitti/neg_100/02.txt" # loop pairs
+  out_file: "../out/kitti/02.txt"  # output file for evaluating
 ```
 
 Then, you can run the `.bin` file following this:
