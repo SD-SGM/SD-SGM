@@ -20,7 +20,7 @@ You need to install these libraries from official guidance.'
 
 You can download the point cloud dataset from the KITTI official [website](https://www.cvlibs.net/datasets/kitti/). In our experiments, we use the labels from the SegNet4D. For the convenience, you can download from [here](https://1drv.ms/u/c/807229e8eebd9eb1/Edbvmep12YdGvGoyMPiKEVAB4VyR7-brHEzbJ_zFS3QeOQ).
 
-Loop pairs: we use the distance-based criteria from the [SSC](https://github.com/lilin-hitcrt/SSC) and overlap-based criteria from [OverlapTransformer](https://github-com-s.libyc.nudt.edu.cn/haomo-ai/OverlapTransformer). You also can download from our [link](https://1drv.ms/u/c/807229e8eebd9eb1/Edbvmep12YdGvGoyMPiKEVAB4VyR7-brHEzbJ_zFS3QeOQ).
+Loop pairs: we use the distance-based criteria from the [SSC](https://github.com/lilin-hitcrt/SSC). You also can download from our [link](https://1drv.ms/u/c/807229e8eebd9eb1/Edbvmep12YdGvGoyMPiKEVAB4VyR7-brHEzbJ_zFS3QeOQ).
 
 ## 3. Usage
 
